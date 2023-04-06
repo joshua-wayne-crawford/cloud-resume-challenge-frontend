@@ -1,0 +1,38 @@
+h1, h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+/** {
+    background-color: black;
+    color:white;
+} sets entire background to black and text to white*/
+
+h3{
+    columns: 2;
+}
+
+meter{
+    float:right;
+}
+
+.content{
+    max-width: 800px;
+    margin: auto;
+}
+
+.sidebar {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 40px;
+    background-color: lightblue;
+    }
+    
+    .sidebar div {
+    padding: 8px;
+    font-size: 24px;
+    display: block;
+    }
