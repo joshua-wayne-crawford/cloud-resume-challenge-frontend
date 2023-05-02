@@ -2,7 +2,23 @@
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js">
+    </script>
+    <script>
+        async function getViews()
+        {
+            var requestOptions = {
+            method: 'POST',
+            redirect: 'follow'
+            };
+
+            const response = await fetch("https://resume-view-count-function.azurewebsites.net/api/get_views_fn?", requestOptions);
+            const views = await response.json();
+            document.getElementById('output').innerHTML = views;
+        }
+
+        window.onload = getViews();
+    </script>    
     <style>
         meter{
             float:right;
@@ -31,6 +47,9 @@
             <a class="mdl-navigation__link" href="#skills">Skills</a>
             <a class="mdl-navigation__link" href="#professionalOrgs">Professional Organizations</a>
         </nav>
+        <p style="text-align: center;">My Resume has been viewed:</p>
+        <span><p id="output" style="text-align:center"></p></span>
+        <p style="text-align: center;">times. Thank you for visiting!</p>
         </div>
         <main class="mdl-layout__content">
         <div class="page-content">
