@@ -26,6 +26,15 @@
         meter{
             float:right;
         }
+        p{
+            font-size: 16px;
+        }
+        span{
+            font-size: large;
+        }
+        li{
+            font-size: large;
+        }
     </style>
 </head>
 <body>
@@ -33,23 +42,23 @@
         <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Welcome!</span>      
         <button type="button" onclick="window.open('https:\/\/www.linkedin.com/in/joshua-crawford-software-engineer/', '_blank')" class="mdl-chip">
-            <span class="mdl-chip__text">Connect With Me On LinkedIn</span>
+            <span style="font-size:medium" class="mdl-chip__text">Connect With Me On LinkedIn</span>
         </button>
         <button type="button" onclick="window.open('https:\/\/github.com/joshua-wayne-crawford?tab=repositories', '_blank')" class="mdl-chip">
-            <span class="mdl-chip__text">View my GitHub</span>
+            <span style="font-size:medium" class="mdl-chip__text">View my GitHub</span>
         </button>
         <button type="button" onclick="window.open('https:\/\/joshuacrawford.hashnode.dev', '_blank')" formtarget="_blank" class="mdl-chip">
-            <span class="mdl-chip__text">Read my Blog</span>
+            <span style="font-size:medium" class="mdl-chip__text">Read my Blog</span>
         </button>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="#resumeHeader">Introduction</a>
-            <a class="mdl-navigation__link" href="#education">Education</a>
-            <a class="mdl-navigation__link" href="#experience">Experience</a>
-            <a class="mdl-navigation__link" href="#projects">Projects</a>
-            <a class="mdl-navigation__link" href="#certifications">Certifications</a>
-            <a class="mdl-navigation__link" href="#languages">Languages</a>
-            <a class="mdl-navigation__link" href="#skills">Skills</a>
-            <a class="mdl-navigation__link" href="#professionalOrgs">Professional Organizations</a>
+            <a class="mdl-navigation__link" style="font-size:large" href="#resumeHeader">Introduction</a>
+            <a class="mdl-navigation__link" style="font-size:large" href="#education">Education</a>
+            <a class="mdl-navigation__link" style="font-size:large" href="#experience">Experience</a>
+            <a class="mdl-navigation__link" style="font-size:large" href="#projects">Projects</a>
+            <a class="mdl-navigation__link" style="font-size:large" href="#certifications">Certifications</a>
+            <a class="mdl-navigation__link" style="font-size:large" href="#languages">Languages</a>
+            <a class="mdl-navigation__link" style="font-size:large" href="#skills">Skills</a>
+            <a class="mdl-navigation__link" style="font-size:large" href="#professionalOrgs">Professional Organizations</a>
         </nav>
         <p style="text-align: center;">My Resume has been viewed:</p>
         <span><p id="output" style="text-align:center"></p></span>
@@ -359,10 +368,11 @@
                 <h2 id="professionalOrgs" style="text-align: center;">Professional Organizations</h2>
                 <p style="font-size:x-large">Theta Tau Professional Engineering Fraternity</p>
                 <ul class="demo-list-item mdl-list">
-                    <li class="mdl-list__item">Vice President</li>
-                    <li class="mdl-list__item">House Steward</li>
-                    <li class="mdl-list__item">Social Chair</li>
-                    <li class="mdl-list__item">Fundraising Chair</li>
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">Vice President</span></li>
+                    <li class="mdl-list__item"><span class="mdl-list__item-primary-content">House Steward</span></li>
+                    <li class="mdl-list__item"><span class="mdl-list__item-primary-content">Social Chair</span></li>
+                    <li class="mdl-list__item"><span class="mdl-list__item-primary-content">Fundraising Chair</span></li>
                 </ul>
             </div>
         </div>
