@@ -23,19 +23,16 @@
         window.onload = getViews();
     </script>    
     <style>
-        meter{
-            float:right;
-        }
-        p{
-            font-size: 16px;
-        }
-        span{
-            font-size: large;
-        }
-        li{
-            font-size: large;
-        }
-        .counter{position: absolute; bottom:0;}
+        h2,h3 {text-align:center;}
+        .page-content {padding: 0 1rem;}
+        .counter p {font-size:medium}
+        #output {font-size: medium}
+        .intro-blurb, .school-info {font-size: large; text-align: center;}
+        .work-duration-and-location{float: right;}
+        .work-duration-and-location p {font-size:large}
+        p {font-size: large}
+        .cert {text-align:center}
+        button {cursor: pointer}
     </style>
 </head>
 <body>
@@ -43,56 +40,55 @@
         <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Welcome!</span>      
         <button type="button" onclick="window.open('https:\/\/www.linkedin.com/in/joshua-crawford-software-engineer/', '_blank')" class="mdl-chip">
-            <span style="font-size:medium; cursor:pointer;" class="mdl-chip__text">Connect On LinkedIn</span>
+            <span class="mdl-chip__text">Connect On LinkedIn</span>
         </button>
         <button type="button" onclick="window.open('https:\/\/github.com/joshua-wayne-crawford?tab=repositories', '_blank')" class="mdl-chip">
-            <span style="font-size:medium; cursor:pointer" class="mdl-chip__text">View my GitHub</span>
+            <span class="mdl-chip__text">View my GitHub</span>
         </button>
         <button type="button" onclick="window.open('https:\/\/joshuacrawford.hashnode.dev', '_blank')" formtarget="_blank" class="mdl-chip">
-            <span style="font-size:medium; cursor:pointer" class="mdl-chip__text">Read my Blog</span>
+            <span class="mdl-chip__text">Read my Blog</span>
         </button>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" style="font-size:large; cursor:pointer" href="#resumeHeader">Introduction</a>
-            <a class="mdl-navigation__link" style="font-size:large; cursor:pointer" href="#education">Education</a>
-            <a class="mdl-navigation__link" style="font-size:large; cursor:pointer" href="#experience">Experience</a>
-            <a class="mdl-navigation__link" style="font-size:large; cursor:pointer" href="#projects">Projects</a>
-            <a class="mdl-navigation__link" style="font-size:large; cursor:pointer" href="#certifications">Certifications</a>
-            <a class="mdl-navigation__link" style="font-size:large; cursor:pointer" href="#languages">Languages</a>
-            <a class="mdl-navigation__link" style="font-size:large; cursor:pointer" href="#skills">Skills</a>
-            <a class="mdl-navigation__link" style="font-size:large; cursor:pointer" href="#professionalOrgs">Professional Organizations</a>
+            <a class="mdl-navigation__link" href="#resumeHeader">Introduction</a>
+            <a class="mdl-navigation__link" href="#education">Education</a>
+            <a class="mdl-navigation__link" href="#experience">Experience</a>
+            <a class="mdl-navigation__link" href="#projects">Projects</a>
+            <a class="mdl-navigation__link" href="#certifications">Certifications</a>
+            <a class="mdl-navigation__link" href="#languages">Languages</a>
+            <a class="mdl-navigation__link" href="#skills">Skills</a>
+            <a class="mdl-navigation__link" href="#professionalOrgs">Professional Organizations</a>
         </nav>
         <div class="counter">
-            <p style="text-align: center;">My Resume has been viewed:</p>
-            <span><p id="output" style="text-align:center"></p></span>
-            <p style="text-align: center;">times. Thank you for visiting!</p>
+            <p>My Resume has been viewed:</p>
+            <span><p id="output"></p></span>
+            <p>times. Thank you for visiting!</p>
         </div>
         </div>
         <main class="mdl-layout__content">
         <div class="page-content">
-
             <div id="resumeHeader">
-                <h1 style="text-align: center;"> Joshua Wayne Crawford </h1>
-                <p style="text-align: center; font-size:large; padding: 0 1rem;"> Recent graduate Software Engineer with 11 months of full time software engineering experience and
+                <h2> Joshua Wayne Crawford </h2>
+                <p class="intro-blurb"> Software Engineer with 11 months of full time software engineering experience and
                     two years of software development internships. Gained valuable insight and knowledge into practical
                     application and day-to-day working environments of agile software engineering teams.</p>
             </div>
 
             <hr>
 
-            <div id="education" style="text-align: center;">
-                <h2>Education</h2>
-                <p style="font-size: x-large; padding: 0 1rem;">South Dakota School of Mines and Technology <br>
+            <div id="education">
+                <h3>Education</h3>
+                <p class="school-info">South Dakota School of Mines and Technology <br>
                 Bachelor's of Science, Computer Engineering <br> 
                 May, 2022</p>
             </div>
 
             <hr>
-            <div style="padding: 0 1rem;">
-                <h2 id="experience" style="text-align: center;">Experience</h2>
+            <div>
+                <h3 id="experience">Experience</h3>
                 <div class="job">
                     <div class="mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col"><p style="font-size: x-large;">Application Analyst I</p>   <p style="font-size: x-large;"> Trustage Insurance </p></div>
-                        <div class="mdl-cell mdl-cell--6-col" style="text-align: right;"><p style="font-size: x-large;">June, 2022 - Present</p>   <p style="font-size: x-large;">Madison, Wisconsin - Remote</p></div>
+                        <div class="mdl-cell mdl-cell--6-col"><p>Application Analyst I</p>   <p> Trustage Insurance </p></div>
+                        <div class="mdl-cell mdl-cell--6-col"><div class="work-duration-and-location"><p>June, 2022 - Present</p>  <p>Madison, Wisconsin - Remote</p></div></div>
                         <ul class="demo-list-item mdl-list">
                             <li class="mdl-list__item">
                                 <span class="mdl-list__item-primary-content">
@@ -113,10 +109,10 @@
                     </div>
                 </div>
 
-                <div class="job" style="padding: 0 1rem;">
+                <div class="job">
                     <div class="mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col"><p style="font-size: x-large;">Level 2 Software Intern</p> <p style="font-size: x-large;">Nucor-Yamato Steel</p></div>
-                        <div class="mdl-cell mdl-cell--6-col" style="text-align: right;"><p style="font-size: x-large;">May, 2021 - May, 2022</b></p> <p style="font-size: x-large;">Blytheville, Arkansas - Remote</p></div>
+                        <div class="mdl-cell mdl-cell--6-col"><p>Level 2 Software Intern</p> <p>Nucor-Yamato Steel</p></div>
+                        <div class="mdl-cell mdl-cell--6-col"><div class="work-duration-and-location"><p>May, 2021 - May, 2022</b></p> <p>Blytheville, Arkansas - Remote</p></div></div>
                         <ul class="demo-list-item mdl-list">
                             <li class="mdl-list__item">
                                 <span class="mdl-list__item-primary-content">
@@ -151,10 +147,10 @@
                     </div>
                 </div>
                 
-                <div class="job" style="padding: 0 1rem;">
+                <div class="job">
                     <div class="mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col"><p style="font-size: x-large;">Software Engineering Co-Op</p>   <p style="font-size: x-large;"> Doosan Bobcat </p></div>
-                        <div class="mdl-cell mdl-cell--6-col" style="text-align: right;"><p style="font-size: x-large;">May, 2020 - December, 2021</p>   <p style="font-size: x-large;">Bismarck, North Dakota</p></div>
+                        <div class="mdl-cell mdl-cell--6-col"><p>Software Engineering Co-Op</p>   <p> Doosan Bobcat </p></div>
+                        <div class="mdl-cell mdl-cell--6-col"><div class="work-duration-and-location"><p>May, 2020 - December, 2021</p>   <p>Bismarck, North Dakota</p></div></div>
                         <ul class="demo-list-item mdl-list">
                             <li class="mdl-list__item">
                                 <span class="mdl-list__item-primary-content">
@@ -180,10 +176,10 @@
                     </div>
                 </div>
 
-                <div class="job" style="padding: 0 1rem;">
+                <div class="job">
                     <div class="mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col"><p style="font-size: x-large;">Level 2 Software Intern</p>   <p style="font-size: x-large;"> Nucor Steel </p></div>
-                        <div class="mdl-cell mdl-cell--6-col" style="text-align: right;"><p style="font-size: x-large;">May, 2019 - August, 2019</p>   <p style="font-size: x-large;">Ahoskie, North Carolina</p></div>
+                        <div class="mdl-cell mdl-cell--6-col"><p>Level 2 Software Intern</p>   <p> Nucor Steel </p></div>
+                        <div class="mdl-cell mdl-cell--6-col"><div class="work-duration-and-location"><p>May, 2019 - August, 2019</p>   <p>Ahoskie, North Carolina</p></div></div>
                         <ul class="demo-list-item mdl-list">
                             <li class="mdl-list__item">
                                 <span class="mdl-list__item-primary-content">
@@ -219,10 +215,10 @@
                     </div>
                 </div>
 
-                <div class="job" style="padding: 0 1rem;">
+                <div class="job">
                     <div class="mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col"><p style="font-size: x-large;">Process Technician Intern</p>   <p style="font-size: x-large;"> Micron Technology </p></div>
-                        <div class="mdl-cell mdl-cell--6-col" style="text-align: right;"><p style="font-size: x-large;">January, 2018 - August, 2018</p>   <p style="font-size: x-large;">Manassas, Virginia</p></div>
+                        <div class="mdl-cell mdl-cell--6-col"><p>Process Technician Intern</p>   <p> Micron Technology </p></div>
+                        <div class="mdl-cell mdl-cell--6-col"><div class="work-duration-and-location"><p>January, 2018 - August, 2018</p>   <p>Manassas, Virginia</p></div></div>
                         <ul class="demo-list-item mdl-list">
                             <li class="mdl-list__item">
                                 <span class="mdl-list__item-primary-content">
@@ -240,11 +236,11 @@
 
             <hr>
 
-            <div style="padding: 0 1rem;">
-                <h2 id="projects" style="text-align: center;">Projects</h2>
+            <div>
+                <h3 id="projects">Projects</h3>
                 <ul class="demo-list-item mdl-list">
                     <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">Cloud Hosted Resume Website</span>
+                        <span class="mdl-list__item-primary-content">Cloud Hosted Resume Website | <a href="https://github.com/joshua-wayne-crawford/cloud-resume-challenge-frontend"> Front-End Github </a> / <a href="https://github.com/joshua-wayne-crawford/cloud-resume-challenge-backend"> Back-End Github </a> | <a href="https://joshuacrawford.hashnode.dev/"> Hashnode</a></span>
                     </li>
                     <li class="mdl-list__item">
                         <span class="mdl-list__item-secondary-content">
@@ -256,15 +252,17 @@
 
             <hr>
 
-            <div style="padding: 0 1rem;">
-                <h2 id="certifications" style="text-align: center;">Certifications</h2>
-                <p style="text-align:center; font-size: x-large">AZ-900 Azure Fundamentals</p>
+            <div>
+                <h3 id="certifications">Certifications</h3>
+                <div class="cert">
+                    <p>AZ-900 Azure Fundamentals</p>
+                </div>
             </div>
 
             <hr>
 
-            <div style="padding: 0 1rem;">
-                <h2 id="languages" style="text-align: center;">Languages</h2>
+            <div>
+                <h3 id="languages">Languages</h3>
                 <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col">
                         <ul class="demo-list-item mdl-list">
@@ -288,7 +286,7 @@
                                 <span class="mdl-list__item-primary-content">
                                     Python
                                 </span>
-                                <meter value="5" min="0" max="10"></meter>
+                                <meter value="4" min="0" max="10"></meter>
                             </li>
                             <li class="mdl-list__item">
                                 <span class="mdl-list__item-primary-content">
@@ -303,8 +301,8 @@
 
             <hr>
 
-            <div style="padding: 0 1rem;">
-                <h2 id="skills" style="text-align: center;">Skills</h2>
+            <div>
+                <h3 id="skills">Skills</h3>
                 <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col">
                         <ul class="demo-list-item mdl-list">
@@ -367,8 +365,8 @@
 
             <hr>
 
-            <div style="padding: 0 1rem;">
-                <h2 id="professionalOrgs" style="text-align: center;">Professional Organizations</h2>
+            <div>
+                <h3 id="professionalOrgs">Professional Organizations</h3>
                 <ul class="demo-list-item mdl-list">
                     <li class="mdl-list__item">
                         <span class="mdl-list__item-primary-content">Theta Tau Professional Engineering Fraternity</span>
