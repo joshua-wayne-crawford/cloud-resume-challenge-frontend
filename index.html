@@ -1,43 +1,35 @@
-<!DOCTYPE html>
-<head>
-    <title>
-        Joshua Crawford's Resume
-    </title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Joshua Crawford's Resume</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js">
-    </script>
-    <script>
-        async function getViews()
-        {
-            var requestOptions = {
-            method: 'POST',
-            redirect: 'follow'
-            };
-
-            const response = await fetch("https://resume-view-count-function.azurewebsites.net/api/get_views_fn?", requestOptions);
-            const views = await response.json();
-            document.getElementById('output').innerHTML = views;
-        }
-
-        window.onload = getViews();
-    </script>    
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        h2,h3 {text-align:center;}
+    h2,h3 {text-align:center;}
         .page-content {padding: 0 1rem;}
         .counter p {font-size:medium}
         #output {font-size: medium; text-align: center;}
-        .intro-blurb, .school-info {font-size: large; text-align: center;}
-        .work-duration-and-location{float: right;}
-        .work-duration-and-location p {font-size:large}
-        p {font-size: large}
+        .intro-blurb, .school-info { text-align: center;}
+        .work-duration-and-location{font-size: larger; float: right;}
         .cert {text-align:center}
         button {cursor: pointer}
     </style>
-</head>
-<body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
-        <div class="mdl-layout__drawer">
+  </head>
+  <body>
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+        
+      </header>
+      <div class="demo-drawer mdl-layout__drawer">
+        <header class="demo-drawer-header">
+        </header>
         <span class="mdl-layout-title">Welcome!</span>      
         <button type="button" onclick="window.open('https:\/\/www.linkedin.com/in/joshua-crawford-software-engineer/', '_blank')" class="mdl-chip">
             <span class="mdl-chip__text">Connect On LinkedIn</span>
@@ -63,8 +55,8 @@
             <span><p id="output"></p></span>
             <p>times. Thank you for visiting!</p>
         </div>
-        </div>
-        <main class="mdl-layout__content">
+      </div>
+      <main class="mdl-layout__content mdl-color--grey-100">
         <div class="page-content">
             <div id="resumeHeader">
                 <h2> Joshua Wayne Crawford </h2>
@@ -385,6 +377,7 @@
                 </ul>
             </div>
         </div>
-        </main>
-    </div>
-</body>
+      </main>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  </body>
+</html>
