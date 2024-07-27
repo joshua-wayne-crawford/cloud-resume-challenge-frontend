@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Login to Azure with OIDC
-    - uses: actions/checkout@v2
     - uses: azure/login@v2
       with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
